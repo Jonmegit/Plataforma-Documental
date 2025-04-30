@@ -37,7 +37,7 @@ export default function DocumentsPage() {
 
   const isLoading = isLoadingDocuments || isLoadingCategories || isLoadingCompanies
 
-  const filteredDocuments = documents?.filter((document) => {
+  const filteredDocuments = documents?.filter((document: Document) => {
     const matchesCategory = !filters.categoryId || document.category_id.toString() === filters.categoryId
     const matchesCompany = !filters.companyId || document.company_id.toString() === filters.companyId
     const matchesSearch =
